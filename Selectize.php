@@ -84,7 +84,7 @@ class Selectize extends InputWidget
 			$this->clientOptions['load'] = new JsExpression("
 function (query, callback) {
 	if (!query.length) return callback();
-	$.getJSON('$url', { query: encodeURIComponent(query) }, function (data) { callback(data); })
+	$.getJSON('$url', { query: query }, function (data) { callback(data); })
 	.fail(function () { callback();	});
 }
 ");
