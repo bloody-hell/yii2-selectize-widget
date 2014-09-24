@@ -15,8 +15,6 @@ use yii\web\AssetBundle;
  */
 class SelectizeLegacyAsset extends AssetBundle
 {
-	public $sourcePath = '@vendor/brianreavis/selectize.js/dist';
-
 	public $css = [
 		'css/selectize.legacy.css',
 	];
@@ -28,4 +26,10 @@ class SelectizeLegacyAsset extends AssetBundle
 	public $depends = [
 		'yii\web\JqueryAsset',
 	];
+
+    public function init()
+    {
+        parent::init();
+        $this->sourcePath = __DIR__ . DIRECTORY_SEPARATOR . 'assets';
+    }
 }

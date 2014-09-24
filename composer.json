@@ -13,8 +13,7 @@
 	],
 	"minimum-stability": "dev",
 	"require": {
-		"yiisoft/yii2": "*",
-		"brianreavis/selectize.js": "*"
+		"yiisoft/yii2": "*"
 	},
 	"autoload": {
 		"psr-4": {

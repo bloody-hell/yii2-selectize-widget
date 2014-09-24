@@ -7,6 +7,7 @@
 namespace dosamigos\selectize;
 
 use yii\web\AssetBundle;
+use Yii;
 
 /**
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
@@ -15,8 +16,6 @@ use yii\web\AssetBundle;
  */
 class SelectizeAsset extends AssetBundle
 {
-	public $sourcePath = '@vendor/brianreavis/selectize.js/dist';
-
 	public $css = [
 		'css/selectize.default.css',
 	];
@@ -28,4 +27,12 @@ class SelectizeAsset extends AssetBundle
 	public $depends = [
 		'yii\web\JqueryAsset',
 	];
+
+    public function init()
+    {
+        parent::init();
+        $this->sourcePath = __DIR__ . DIRECTORY_SEPARATOR . 'assets';
+    }
+
+
 }

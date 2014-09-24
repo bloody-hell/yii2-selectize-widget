@@ -15,8 +15,6 @@ use yii\web\AssetBundle;
  */
 class SelectizeBootstrapAsset extends AssetBundle
 {
-	public $sourcePath = '@vendor/brianreavis/selectize.js/dist';
-
 	public $css = [
 		'css/selectize.bootstrap3.css',
 	];
@@ -29,4 +27,10 @@ class SelectizeBootstrapAsset extends AssetBundle
 		'yii\bootstrap\BootstrapAsset',
 		'yii\web\JqueryAsset',
 	];
+
+    public function init()
+    {
+        parent::init();
+        $this->sourcePath = __DIR__ . DIRECTORY_SEPARATOR . 'assets';
+    }
 }
